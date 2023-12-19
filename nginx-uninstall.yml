@@ -1,0 +1,20 @@
+---
+- name: Install nginx in ubuntu
+  hosts: ubuntu
+  tasks:
+    - name: update apt
+      apt:
+        update_cache: yes
+    - name: install nginx
+      apt:
+        name: nginx
+        state: absent
+    - name: delete  user
+      user:
+        name: qtree
+        password: qtree@123
+        state: absent
+    - name: install apache
+      apt:
+        name: apache2
+        state: absent
