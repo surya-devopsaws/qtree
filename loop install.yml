@@ -14,5 +14,5 @@
     - name: Install software
       apt:
         name: "{{ item }}"
-        state: present
+        state: absent
       loop: "{{ software_lists }}"
