@@ -14,5 +14,5 @@
     - name: Uninstall software
       apt:
         name: "{{ item }}"
-        state: absent
+        state: present
       loop: "{{ software_lists }}"
